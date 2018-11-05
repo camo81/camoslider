@@ -127,6 +127,7 @@ class CamoSlider extends Module
 	 */
 	protected function installSamples()
 	{
+		/*
 		$languages = Language::getLanguages(false);
 		for ($i = 1; $i <= 3; ++$i)
 		{
@@ -147,6 +148,7 @@ class CamoSlider extends Module
 			}
 			$slide->add();
 		}
+		*/
 	}
 
 	/**
@@ -629,8 +631,8 @@ class CamoSlider extends Module
 	{
 		if (!isset($this->context->controller->php_self) || $this->context->controller->php_self != 'index')
 			return;
-		$this->context->controller->addCSS($this->_path.'homeslider.css');
-		$this->context->controller->addJS($this->_path.'js/homeslider.js');
+		$this->context->controller->addCSS($this->_path.'camoslider.css');
+		$this->context->controller->addJS($this->_path.'js/camoslider.js');
 		$this->context->controller->addJqueryPlugin(array('bxslider'));
 
 		$config = $this->getConfigFieldsValues();
